@@ -1,0 +1,40 @@
+{
+  "info": {
+    "title": "User Service API",
+    "version": "1.0.0",
+    "description": "API for managing users in the system"
+  },
+  "paths": {
+    "/users": {
+      "get": {
+        "summary": "Get a list of users",
+        "responses": {
+          "200": {
+            "description": "A list of users",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "integer"
+                      },
+                      "name": {
+                        "type": "string"
+                      },
+                      "email": {
+                        "type": "string"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
